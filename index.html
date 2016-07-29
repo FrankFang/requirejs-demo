@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#module1{
+	height: 200px;
+	background: #ddd;
+}
+#module2{
+	height: 200px;
+	background: #444;
+	color: white;
+}
+</style>
+</head>
+
+<body>
+
+<div id=global>
+
+	<div id=module1>
+	<button>I am frank</button>
+	</div>
+
+	<div id=module2>
+	<button>I am Terry</button>
+	</div>
+</div>
+
+<script src="./node_modules/requirejs/require.js"></script>
+<script>
+  require.config({
+  	baseUrl:'modules/',
+	    paths: {
+		"jquery": "/node_modules/jquery/dist/jquery.min"
+	    }
+  })
+</script>
+<script src="app.js"></script>
+
+
+</body>
+</html>
